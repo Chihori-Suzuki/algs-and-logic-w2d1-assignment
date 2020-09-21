@@ -2,11 +2,18 @@
 // the sum of the absolute value of each element.
 
 const getAbsSum = function(arr) {
-
+    let ans = 0;
+    for (i = 0; arr.length ; i++){
+        if(arr[i] < 0){
+            arr[i] *= -1 ;
+        }
+        ans += arr[i];
+    };
+    return ans;
 }
 
 
-// getAbsSum([2, -1, 4, 8, 10]) 
+console.log(getAbsSum([2, -1, 4, 8, 10]));
 // ➞ 25
 
 // getAbsSum([-3, -4, -10, -2, -3]) 
